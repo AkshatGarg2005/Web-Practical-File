@@ -1,0 +1,1 @@
+craete a js program to find area of 3 differtent circle with 3 different radius

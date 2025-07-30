@@ -1,0 +1,1 @@
+Q.2.	Add some pictures according to click event one click one picture, double click 2-pictures.
