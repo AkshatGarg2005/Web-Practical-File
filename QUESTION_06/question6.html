@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Form with Validation</title>
+    <style>
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+        }
+        
+        .form-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        label {
+            width: 120px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        input, textarea {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #999;
+            font-size: 14px;
+        }
+        
+        input:invalid {
+            border-color: #ff0000;
+        }
+        
+        input:valid {
+            border-color: #00aa00;
+        }
+        
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML5 Form with Built-in Validation</h1>
+    
+    <form action="#" method="post" novalidate>
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" 
+                   id="name" 
+                   name="name" 
+                   required 
+                   minlength="2" 
+                   maxlength="50"
+                   placeholder="Enter your first name">
+        </div>
+        
+        <div class="form-row">
+            <label for="secondname">Second name</label>
+            <input type="text" 
+                   id="secondname" 
+                   name="secondname" 
+                   required 
+                   minlength="2" 
+                   maxlength="50"
+                   placeholder="Enter your last name">
+        </div>
+        
+        <div class="form-row">
+            <label for="initials">Initials</label>
+            <input type="text" 
+                   id="initials" 
+                   name="initials" 
+                   pattern="[A-Z]{1,4}" 
+                   maxlength="4"
+                   title="Enter 1-4 capital letters"
+                   placeholder="e.g., J.S.">
+        </div>
+        
+        <div class="form-row">
+            <label for="address">Address</label>
+            <textarea id="address" 
+                      name="address" 
+                      rows="3" 
+                      required 
+                      minlength="10"
+                      placeholder="Enter your full address"></textarea>
+        </div>
+        
+        <div class="form-row">
+            <label for="tel">Tel</label>
+            <input type="tel" 
+                   id="tel" 
+                   name="tel" 
+                   required 
+                   pattern="[0-9+\-\s\(\)]+"
+                   title="Enter a valid phone number"
+                   placeholder="e.g., +1-234-567-8900">
+        </div>
+        
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" 
+                   id="email" 
+                   name="email" 
+                   required 
+                   placeholder="Enter your email address">
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Form</button>
+        <button type="reset" class="submit-btn" style="background-color: #6c757d; margin-left: 10px;">Reset Form</button>
+    </form>
+
+    <script>
+        // Add custom validation messaging
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual submission for demo
+            
+            // Check if form is valid
+            if (this.checkValidity()) {
+                alert('Form is valid! All fields passed HTML5 validation.');
+            } else {
+                alert('Please correct the errors in the form before submitting.');
+            }
+            
+            // Show validation states
+            const inputs = this.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    input.reportValidity(); // Show browser validation message
+                }
+            });
+        });
+        
+        // Real-time validation feedback
+        document.querySelectorAll('input, textarea').forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.checkValidity()) {
+                    this.style.borderColor = '#00aa00';
+                } else {
+                    this.style.borderColor = '#ff0000';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

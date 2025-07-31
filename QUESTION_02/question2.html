@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Registration Form</title>
+  <style>
+    .container {
+      width: 520px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 5px solid #000;
+    }
+    .container table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .container td, .container th {
+      padding: 6px;
+      vertical-align: top;
+    }
+    .header {
+      text-align: center;
+    }
+    .header img {
+      vertical-align: middle;
+      width: 50px;
+      height: auto;
+    }
+    .header h2 {
+      display: inline-block;
+      color: red;
+      margin: 0 0 0 8px;
+      font-size: 1.5em;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <form action="#" method="post" enctype="multipart/form-data">
+      <table>
+        <!-- Title row with icon -->
+        <tr>
+          <td colspan="2" class="header">
+            <img src="employee.png" alt="Employee Icon">
+            <h2>Employee Registration Form</h2>
+          </td>
+        </tr>
+
+        <!-- Salutation radios -->
+        <tr>
+          <td colspan="2" class="center">
+            <label><input type="radio" name="salutation" value="Mr" checked> Mr.</label>
+            <label><input type="radio" name="salutation" value="Mrs"> Mrs.</label>
+            <label><input type="radio" name="salutation" value="Ms"> Ms.</label>
+          </td>
+        </tr>
+
+        <!-- Personal info -->
+        <tr>
+          <td>First Name</td>
+          <td><input type="text" name="firstName" placeholder="First Name" required></td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td><input type="text" name="lastName" placeholder="Last Name" required></td>
+        </tr>
+        <tr>
+          <td>Mail Address1</td>
+          <td><input type="text" name="address1" placeholder="Address Line 1"></td>
+        </tr>
+        <tr>
+          <td>Mail Address2</td>
+          <td><input type="text" name="address2" placeholder="Address Line 2"></td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td><input type="text" name="city" placeholder="City"></td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td>
+            <select name="state">
+              <option value="Gujarat">Gujarat</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <!-- add more as needed -->
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Zip</td>
+          <td><input type="text" name="zip" placeholder="Zip Code"></td>
+        </tr>
+
+        <!-- File upload -->
+        <tr>
+          <td>Upload Photo</td>
+          <td><input type="file" name="photo"></td>
+        </tr>
+
+        <!-- Contact -->
+        <tr>
+          <td>E-Mail</td>
+          <td><input type="email" name="email" placeholder="email@example.com"></td>
+        </tr>
+        <tr>
+          <td>Mobile</td>
+          <td><input type="tel" name="mobile" placeholder="+91"></td>
+        </tr>
+
+        <!-- Languages -->
+        <tr>
+          <td>Languages known</td>
+          <td>
+            <label><input type="checkbox" name="languages" value="Gujarati" checked> Gujarati</label><br>
+            <label><input type="checkbox" name="languages" value="Hindi" checked> Hindi</label><br>
+            <label><input type="checkbox" name="languages" value="English" checked> English</label><br>
+            <label><input type="checkbox" name="languages" value="Marathi"> Marathi</label>
+          </td>
+        </tr>
+
+        <!-- Additional info -->
+        <tr>
+          <td>Additional Information</td>
+          <td>
+            <textarea name="additionalInfo" rows="4" placeholder="Optional"></textarea>
+          </td>
+        </tr>
+
+        <!-- Buttons -->
+        <tr>
+          <td colspan="2" class="center">
+            <input type="submit" value="submit">
+            <input type="reset"  value="reset">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+</body>
+</html>

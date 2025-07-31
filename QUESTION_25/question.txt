@@ -1,1 +1,1 @@
-Q.5.	Design a Web Page for Calculating age of a person.
+Q.6.	Design a web page for Creating image with timer, and change the image with a define time limit.

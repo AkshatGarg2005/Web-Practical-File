@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+#box{width:80px;height:80px;background:#2196f3;border-radius:12px;margin:40px auto;transition:transform .3s}
+.move{animation: slide 1.2s ease-in-out infinite alternate}
+@keyframes slide{from{transform:translateX(-120px)} to{transform:translateX(120px)}}
+</style>
+</head>
+<body onload="document.getElementById('box').classList.add('move')">
+<div id="box" onclick="this.classList.toggle('move')"></div>
+<p style="text-align:center">Click the square to start/stop.</p>
+</body>
+</html>

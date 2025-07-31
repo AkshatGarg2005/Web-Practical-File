@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button id="area" style="padding: 10px 18px">Click or Double‑Click</button>
+    <div
+      id="out"
+      style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px"
+    ></div>
+
+    <script>
+      const out = document.getElementById("out");
+      let clickTimer;
+      function add(n) {
+        for (let i = 0; i < n; i++) {
+          const img = document.createElement("img");
+          img.width = 120;
+          img.height = 90;
+          img.src = `https://picsum.photos/seed/${Date.now() + i}/240/180`;
+          img.alt = "img";
+          out.appendChild(img);
+        }
+      }
+      document.getElementById("area").addEventListener("click", () => {
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(() => add(1), 220); // single
+      });
+      document.getElementById("area").addEventListener("dblclick", () => {
+        clearTimeout(clickTimer);
+        add(2); // double
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<body>
+<label>DOB: <input type="date" id="dob"></label>
+<button onclick="age()">Calculate Age</button>
+<p id="out"></p>
+
+<script>
+function age(){
+  const v = document.getElementById('dob').value;
+  if(!v){ out.textContent="Select DOB."; return; }
+  const dob = new Date(v);
+  const t = new Date();
+  let y = t.getFullYear() - dob.getFullYear();
+  let m = t.getMonth() - dob.getMonth();
+  let d = t.getDate() - dob.getDate();
+
+  if(d < 0){
+    m--;
+    const prevMonthDays = new Date(t.getFullYear(), t.getMonth(), 0).getDate();
+    d += prevMonthDays;
+  }
+  if(m < 0){ y--; m += 12; }
+  out.textContent = `Age: ${y} year(s), ${m} month(s), ${d} day(s).`;
+}
+const out=document.getElementById('out');
+</script>
+</body>
+</html>

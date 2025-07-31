@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"] {
+            padding: 5px;
+            font-size: 14px;
+        }
+        textarea {
+            width: 450px;
+            height: 120px;
+            font-size: 14px;
+            padding: 5px;
+            resize: none;
+            overflow: hidden;
+        }
+        .checkbox-section, .radio-section {
+            margin: 20px 0;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        select {
+            padding: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Feedback Form</h1>
+        <p>Please fill out this form to help us improve our site.</p>
+        
+        <form>
+            <p>Name: <input type="text" name="name" style="width: 250px;"></p>
+            
+            <p>Comments:</p>
+            <textarea name="comments" placeholder="Enter comments here."></textarea>
+            
+            <p>E-mail Address: <input type="email" name="email" style="width: 250px;"></p>
+            
+            <div class="checkbox-section">
+                <p><strong>Things you liked:</strong></p>
+                Site design <input type="checkbox" name="liked" value="site_design">
+                Links <input type="checkbox" name="liked" value="links">
+                Ease of use <input type="checkbox" name="liked" value="ease_of_use">
+                Images <input type="checkbox" name="liked" value="images">
+                Source code <input type="checkbox" name="liked" value="source_code">
+            </div>
+            
+            <div class="radio-section">
+                <p><strong>How did you get to our site?:</strong></p>
+                Search engine <input type="radio" name="how_found" value="search_engine" checked>
+                Links from another site <input type="radio" name="how_found" value="links">
+                Deitel.com Website <input type="radio" name="how_found" value="deitel">
+                Reference in a book <input type="radio" name="how_found" value="book">
+                Other <input type="radio" name="how_found" value="other">
+            </div>
+            
+            <p>Rate our site: 
+                <select name="rating">
+                    <option value="amazing" selected>Amazing</option>
+                    <option value="10">10</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                    <option value="awful">Awful</option>
+                </select>
+            </p>
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+    </div>
+</body>
+</html>

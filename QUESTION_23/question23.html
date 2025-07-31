@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<body>
+<form onsubmit="return check()">
+<input type="password" id="p1" placeholder="Password" required minlength="6">
+<input type="password" id="p2" placeholder="Confirm Password" required>
+<button type="submit">Submit</button>
+<span id="msg"></span>
+</form>
+
+<script>
+function check(){
+  const p1=p1El.value, p2=p2El.value;
+  const ok = p1===p2;
+  msg.textContent = ok ? "Matched" : "Not matched";
+  msg.style.color = ok ? "green" : "red";
+  return ok;
+}
+const p1El=document.getElementById('p1');
+const p2El=document.getElementById('p2');
+const msg=document.getElementById('msg');
+[p1El,p2El].forEach(i=>i.addEventListener('input', ()=>check()));
+</script>
+</body>
+</html>

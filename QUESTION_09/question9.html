@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table { border-collapse: collapse; border: 2px solid black; }
+        td { border: 1px solid black; padding: 5px; }
+        .title { text-align: center; font-weight: bold; font-size: 16px; }
+        input[type="text"], input[type="email"] { width: 140px; }
+        select { width: 100px; }
+    </style>
+</head>
+<body>
+    <table>
+        <tr><td colspan="4" class="title">Registration Form</td></tr>
+        <tr>
+            <td>Student Name</td>
+            <td><input type="text" placeholder="First Name"></td>
+            <td><input type="text" placeholder="Middle Name"></td>
+            <td><input type="text" placeholder="Last Name"></td>
+        </tr>
+        <tr>
+            <td>Father's Name</td>
+            <td><input type="text" placeholder="Enter your father's Name"></td>
+            <td>Mother's Name</td>
+            <td><input type="text" placeholder="Enter your Mother's Name"></td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" placeholder="dd-mm-yyyy"></td>
+            <td>Gender</td>
+            <td>Male <input type="radio" name="gender"> Female <input type="radio" name="gender"></td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>Gen <input type="radio" name="category"> OBC <input type="radio" name="category"> SC/ST <input type="radio" name="category"></td>
+            <td>Handicapped</td>
+            <td>Yes <input type="radio" name="handicapped"> No <input type="radio" name="handicapped"></td>
+        </tr>
+        <tr>
+            <td>Ex-Serviceman</td>
+            <td>Yes <input type="radio" name="exservice"> NO <input type="radio" name="exservice"></td>
+            <td>EWS</td>
+            <td>Yes <input type="radio" name="ews"> No <input type="radio" name="ews"></td>
+        </tr>
+        <tr>
+            <td>Email ID</td>
+            <td><input type="email"></td>
+            <td>Mobile No.</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td><select><option>Select any One</option></select></td>
+            <td>City</td>
+            <td><select><option>Select any One</option></select></td>
+        </tr>
+        <tr>
+            <td>Upload Photo</td>
+            <td><input type="file"></td>
+            <td>Upload Signature</td>
+            <td><input type="file"></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align:center;"><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</body>
+</html>

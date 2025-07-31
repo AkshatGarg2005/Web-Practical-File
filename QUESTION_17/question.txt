@@ -1,0 +1,1 @@
+Write a CSS rule that makes all text 1.5 times larger than the base font of the system and colors the text red.

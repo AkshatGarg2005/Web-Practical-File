@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<body>
+<label>Interval (seconds): <input type="number" id="sec" min="1" value="2"></label>
+<button id="start">Start</button>
+<img id="slide" width="360" height="240" alt="slideshow" style="display:block;margin-top:12px">
+<script>
+const imgs = [
+  "https://picsum.photos/seed/a/720/480",
+  "https://picsum.photos/seed/b/720/480",
+  "https://picsum.photos/seed/c/720/480",
+  "https://picsum.photos/seed/d/720/480"
+];
+let idx=0, timer=null;
+document.getElementById('start').onclick = () => {
+  const s = Math.max(1, +document.getElementById('sec').value) * 1000;
+  clearInterval(timer);
+  const img = document.getElementById('slide');
+  function show(){ img.src = imgs[idx++ % imgs.length]; }
+  show();
+  timer = setInterval(show, s);
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<body>
+<input type="date" id="d1"> to
+<input type="date" id="d2">
+<button onclick="calc()">Days</button>
+<strong id="res"></strong>
+
+<script>
+function calc(){
+  const a = new Date(document.getElementById('d1').value);
+  const b = new Date(document.getElementById('d2').value);
+  if(isNaN(a)||isNaN(b)) return res.textContent="Select both dates.";
+  const ms = Math.abs(b - a);
+  const days = Math.round(ms / 86400000); // 1000*60*60*24
+  res.textContent = `= ${days} day(s)`;
+}
+const res = document.getElementById('res');
+</script>
+</body>
+</html>
