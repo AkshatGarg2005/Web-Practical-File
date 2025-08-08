@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Q9</title>
+  <meta charset="UTF-8" />
+  <title>Q9 – Function as Parameter (Console Only)</title>
 </head>
 <body>
-  <h3>Q9: Function as Parameter</h3>
-  <p>Operation: <code>applyTwice(square, 3)</code></p>
-  <p><b>Output:</b> <span id="out"></span></p>
-
   <script>
-    function applyTwice(fn,x){ return fn(fn(x)); }
-    const square = n => n*n;
-    out.textContent = applyTwice(square, 3); // 81
+    // Function-as-parameter helper: exposes applyTwice() and square() globally
+    (() => {
+      function applyTwice(fn, x) {
+        return fn(fn(x));
+      }
+
+      const square = n => n * n;
+
+      // Make both functions available in the console
+      window.applyTwice = applyTwice;
+      window.square = square;
+
+      // Demo run
+      const output = applyTwice(square, 3); // 81
+
+      console.log("Q9: Function as Parameter");
+      console.log("Operation: applyTwice(square, 3)");
+      console.log("Output   :", output);
+      console.log(
+        '\nTry in the console, e.g. applyTwice(square, 5) // 625'
+      );
+    })();
   </script>
 </body>
 </html>

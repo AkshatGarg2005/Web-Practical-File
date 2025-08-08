@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Q3</title>
-  </head>
-  <body>
-    <h3>Q3: Alphabetical Order</h3>
-    <p>Input: <code>vitbhopal</code></p>
-    <p><b>Output:</b> <span id="out"></span></p>
-    <script>
-      const alphaOrder = (s) =>
-        s
-          .split("")
-          .sort((a, b) => a.localeCompare(b))
-          .join("");
-      document.getElementById("out").textContent = alphaOrder("vitbhopal");
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Q3 - Alphabetical Order (Console Only)</title>
+</head>
+<body>
+  <script>
+    // Alphabetical-order helper: exposes alphaOrder() globally
+    (() => {
+      const alphaOrder = str =>
+        [...str].sort((a, b) => a.localeCompare(b)).join("");
+
+      // Make it accessible in the console
+      window.alphaOrder = alphaOrder;
+
+      // Demo run
+      const input  = "vitbhopal";
+      const output = alphaOrder(input);
+
+      console.log("Q3: Alphabetical Order");
+      console.log("Input :", input);
+      console.log("Output:", output);
+      console.log(
+        '\nTry your own word in the console, e.g. alphaOrder("openai")'
+      );
+    })();
+  </script>
+</body>
 </html>

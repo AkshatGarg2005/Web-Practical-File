@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Q7</title>
+  <meta charset="UTF-8" />
+  <title>Q7 – k-Combinations (Console Only)</title>
 </head>
 <body>
-  <h3>Q7: k-Combinations</h3>
-  <p>Array: <code>[1,2,3,4]</code>, k=<code>2</code></p>
-  <pre id="out"></pre>
-
   <script>
-    const kSubsets = (arr,k)=>{
-      const out=[]; 
-      const dfs=(i,cur)=>{
-        if(cur.length===k){ out.push([...cur]); return; }
-        for(let j=i;j<arr.length;j++){ cur.push(arr[j]); dfs(j+1,cur); cur.pop(); }
+    // Helper: returns all k-element subsets of an array
+    (() => {
+      const kSubsets = (arr, k) => {
+        const result = [];
+        const dfs = (start, combo) => {
+          if (combo.length === k) {
+            result.push([...combo]);
+            return;
+          }
+          for (let i = start; i < arr.length; i++) {
+            combo.push(arr[i]);
+            dfs(i + 1, combo);
+            combo.pop();
+          }
+        };
+        dfs(0, []);
+        return result;
       };
-      dfs(0,[]);
-      return out;
-    };
-    out.textContent = JSON.stringify(kSubsets([1,2,3,4],2));
+
+      // Expose to the console
+      window.kSubsets = kSubsets;
+
+      // Demo run
+      const array = [1, 2, 3, 4];
+      const k = 2;
+      const combos = kSubsets(array, k);
+
+      console.log("Q7: k-Combinations");
+      console.log("Array :", array);
+      console.log("k     :", k);
+      console.log("Output:", combos);
+      console.log(
+        '\nTry your own call in the console, e.g. kSubsets([\'a\',\'b\',\'c\'], 2)'
+      );
+    })();
   </script>
 </body>
 </html>

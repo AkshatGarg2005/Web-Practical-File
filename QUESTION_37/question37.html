@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Q11</title>
+  <meta charset="UTF-8" />
+  <title>Q11 – camelCase (Console Only)</title>
 </head>
 <body>
-  <h3>Q11: camelCase</h3>
-  <p>Input: <code>hello world_from-vit-bhopal</code></p>
-  <p><b>Output:</b> <span id="out"></span></p>
-
   <script>
-    const toCamel = s => s.toLowerCase().split(/[\s_\-]+/)
-      .map((w,i)=> i ? w[0].toUpperCase()+w.slice(1) : w)
-      .join('');
-    out.textContent = toCamel("hello world_from-vit-bhopal");
+    // camelCase helper: exposes toCamel() globally
+    (() => {
+      const toCamel = str =>
+        str
+          .toLowerCase()
+          .split(/[\s_\-]+/)
+          .map((w, i) => (i ? w[0].toUpperCase() + w.slice(1) : w))
+          .join("");
+
+      // Make it available in the console
+      window.toCamel = toCamel;
+
+      // Demo run
+      const input  = "hello world_from-vit-bhopal";
+      const output = toCamel(input);
+
+      console.log("Q11: camelCase");
+      console.log("Input :", `"${input}"`);
+      console.log("Output:", output);
+      console.log(
+        '\nTry your own string in the console, e.g. toCamel("OpenAI_builds-models")'
+      );
+    })();
   </script>
 </body>
 </html>

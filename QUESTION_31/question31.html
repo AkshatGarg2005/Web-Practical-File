@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Q5</title>
+  <meta charset="UTF-8" />
+  <title>Q5 – Type Detector (Console Only)</title>
 </head>
 <body>
-  <h3>Q5: Type Detector</h3>
-  <p>Value: <code>[1,2,3]</code></p>
-  <p><b>Type:</b> <span id="out"></span></p>
-
   <script>
-    const typeOf = v => (v===null ? 'null' : Array.isArray(v) ? 'array' : typeof v);
-    out.textContent = typeOf([1,2,3]);
+    // Type-detector helper: exposes typeOf() globally
+    (() => {
+      const typeOf = v =>
+        v === null ? "null" : Array.isArray(v) ? "array" : typeof v;
+
+      // Expose to the console
+      window.typeOf = typeOf;
+
+      // Demo run
+      const value = [1, 2, 3];
+      const detected = typeOf(value);
+
+      console.log("Q5: Type Detector");
+      console.log("Value :", value);
+      console.log("Type  :", detected);
+      console.log(
+        '\nTry other values in the console, e.g. typeOf(null), typeOf({a:1}), typeOf("text")'
+      );
+    })();
   </script>
 </body>
 </html>

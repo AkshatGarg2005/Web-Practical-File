@@ -1,25 +1,66 @@
 <!doctype html>
-<html>
-<body>
-<label>Interval (seconds): <input type="number" id="sec" min="1" value="2"></label>
-<button id="start">Start</button>
-<img id="slide" width="360" height="240" alt="slideshow" style="display:block;margin-top:12px">
-<script>
-const imgs = [
-  "https://picsum.photos/seed/a/720/480",
-  "https://picsum.photos/seed/b/720/480",
-  "https://picsum.photos/seed/c/720/480",
-  "https://picsum.photos/seed/d/720/480"
-];
-let idx=0, timer=null;
-document.getElementById('start').onclick = () => {
-  const s = Math.max(1, +document.getElementById('sec').value) * 1000;
-  clearInterval(timer);
-  const img = document.getElementById('slide');
-  function show(){ img.src = imgs[idx++ % imgs.length]; }
-  show();
-  timer = setInterval(show, s);
-};
-</script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Local Slideshow</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 24px;
+      }
+
+      #slide {
+        display: none;           /* hidden until Start is clicked */
+        width: 360px;
+        height: 240px;
+        margin-top: 12px;
+        object-fit: cover;
+        border-radius: 4px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+
+  <body>
+    <label>
+      Interval&nbsp;(seconds):
+      <input type="number" id="sec" min="1" value="2" />
+    </label>
+    <button id="start">Start</button>
+
+    <img id="slide" alt="slideshow" />
+
+    <script>
+      (() => {
+        /* Two local images */
+        const sources = ["background.jpg", "background2.png"];
+
+        /* Return src with cache-busting query so each switch triggers a load */
+        const cacheBusted = (src) =>
+          `${src}?v=${Date.now()}${Math.random().toString(36).slice(2)}`;
+
+        let idx = 0,
+          timer = null;
+        const imgEl = document.getElementById("slide");
+        const secInput = document.getElementById("sec");
+        const startBtn = document.getElementById("start");
+
+        startBtn.addEventListener("click", () => {
+          const interval = Math.max(1, +secInput.value) * 1000;
+          clearInterval(timer);
+
+          /* Reveal image element on first start */
+          imgEl.style.display = "block";
+
+          function show() {
+            const src = cacheBusted(sources[idx++ % sources.length]);
+            imgEl.src = src;
+          }
+
+          show(); // first frame immediately
+          timer = setInterval(show, interval);
+        });
+      })();
+    </script>
+  </body>
 </html>

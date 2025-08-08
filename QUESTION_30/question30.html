@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Q4</title>
+  <meta charset="UTF-8" />
+  <title>Q4 – Longest Word (Console Only)</title>
 </head>
 <body>
-  <h3>Q4: Longest Word</h3>
-  <p>Sentence: <code>VIT Bhopal makes strong engineers</code></p>
-  <p><b>Longest word:</b> <span id="out"></span></p>
-
   <script>
-    const longestWord = s => (s.match(/\b\w+\b/g)||[])
-      .reduce((a,w)=> w.length>a.length ? w : a, '');
-    out.textContent = longestWord("VIT Bhopal makes strong engineers");
+    // Longest-word helper: exposes longestWord() globally
+    (() => {
+      const longestWord = sentence =>
+        (sentence.match(/\b\w+\b/g) || []).reduce(
+          (longest, word) => (word.length > longest.length ? word : longest),
+          ""
+        );
+
+      // Expose to the console
+      window.longestWord = longestWord;
+
+      // Demo run
+      const sentence = "VIT Bhopal makes strong engineers";
+      const longest  = longestWord(sentence);
+
+      console.log("Q4: Longest Word");
+      console.log("Sentence:", sentence);
+      console.log("Longest :", longest);
+      console.log(
+        '\nTry your own sentence in the console, e.g. longestWord("OpenAI builds powerful models")'
+      );
+    })();
   </script>
 </body>
 </html>

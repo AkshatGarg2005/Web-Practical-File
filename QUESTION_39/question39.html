@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Q13</title>
+  <meta charset="UTF-8" />
+  <title>Q13 – Alphanumeric Check (Console Only)</title>
 </head>
 <body>
-  <h3>Q13: Alphanumeric Check</h3>
-  <p>Username: <code>VIT23BCE10641</code></p>
-  <p><b>Result:</b> <span id="out"></span></p>
-
   <script>
-    const isAlnum = s => /^[A-Za-z0-9]+$/.test(s);
-    out.textContent = isAlnum("VIT23BCE10641") ? "Valid" : "Invalid";
+    // Alphanumeric-check helper: exposes isAlnum() globally
+    (() => {
+      const isAlnum = str => /^[A-Za-z0-9]+$/.test(str);
+
+      // Expose to the console
+      window.isAlnum = isAlnum;
+
+      // Demo run
+      const username = "VIT23BCE10641";
+      const result   = isAlnum(username) ? "Valid" : "Invalid";
+
+      console.log("Q13: Alphanumeric Check");
+      console.log("Username:", username);
+      console.log("Result  :", result);
+      console.log(
+        '\nTry another value in the console, e.g. isAlnum("OpenAI_123")'
+      );
+    })();
   </script>
 </body>
 </html>

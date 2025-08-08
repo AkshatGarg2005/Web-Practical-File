@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Q10</title>
+  <meta charset="UTF-8" />
+  <title>Q10 – Split to Words (Console Only)</title>
 </head>
 <body>
-  <h3>Q10: Split to Words</h3>
-  <p>Text: <code>Welcome   to   VIT Bhopal</code></p>
-  <pre id="out"></pre>
-
   <script>
-    const words = s => s.trim().split(/\s+/);
-    out.textContent = JSON.stringify(words("Welcome   to   VIT Bhopal"));
+    // Split-to-words helper: exposes words() globally
+    (() => {
+      const words = str => str.trim().split(/\s+/);
+
+      // Expose to the console
+      window.words = words;
+
+      // Demo run
+      const text = "Welcome   to   VIT Bhopal";
+      const result = words(text);
+
+      console.log("Q10: Split to Words");
+      console.log("Text :", `"${text}"`);
+      console.log("Words:", result);
+      console.log(
+        '\nTry your own string in the console, e.g. words("OpenAI   builds  models")'
+      );
+    })();
   </script>
 </body>
 </html>
