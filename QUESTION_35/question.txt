@@ -1,0 +1,1 @@
+question: 9) Write a JavaScript program to pass a function as a parameter.

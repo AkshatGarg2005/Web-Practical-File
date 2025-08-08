@@ -1,0 +1,14 @@
+question: 15) Methods used to provide effects in jQuery.
+answer:
+
+Visibility: show(), hide(), toggle().
+
+Fade: fadeIn(), fadeOut(), fadeToggle(), fadeTo(opacity).
+
+Slide: slideDown(), slideUp(), slideToggle().
+
+Custom: animate(props, duration, easing, complete) (numeric CSS only).
+
+Control helpers: stop(), delay(), finish(), promise().
+
+Params/notes: duration in ms/'fast'/'slow'; optional easing/callback; effects queue per element—don’t overuse for performance.

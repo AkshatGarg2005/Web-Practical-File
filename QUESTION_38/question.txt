@@ -1,0 +1,15 @@
+question: 12) What is form validation?
+answer:
+
+Definition: verify inputs match rules before processing to keep data clean and secure.
+
+Client-side: HTML5 constraints + JS for instant feedback (required, type="email", pattern, min/max).
+
+Server-side: mandatory final check—sanitize, escape, enforce business rules/authorization.
+
+API/CSS: checkValidity(), reportValidity(), setCustomValidity(), and selectors :invalid, :required.
+
+Good UX: clear labels, inline error text, focus first invalid field, accessible (aria-invalid).
+
+Common mistakes: relying only on client side, weak regex, leaking detailed server errors.
+

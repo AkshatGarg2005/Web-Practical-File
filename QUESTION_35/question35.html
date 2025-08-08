@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Q9</title>
+</head>
+<body>
+  <h3>Q9: Function as Parameter</h3>
+  <p>Operation: <code>applyTwice(square, 3)</code></p>
+  <p><b>Output:</b> <span id="out"></span></p>
+
+  <script>
+    function applyTwice(fn,x){ return fn(fn(x)); }
+    const square = n => n*n;
+    out.textContent = applyTwice(square, 3); // 81
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Q16</title>
+</head>
+<body>
+  <h3>Q16: Union & Intersection (Sorted)</h3>
+  <p>A: <code>[1,2,2,3,5,8]</code></p>
+  <p>B: <code>[2,3,4,8,9]</code></p>
+  <p><b>Union:</b> <span id="u"></span></p>
+  <p><b>Intersection:</b> <span id="i"></span></p>
+
+  <script>
+    const union=(a,b)=>{const r=[];let i=0,j=0,last;
+      while(i<a.length||j<b.length){
+        const x=i<a.length?a[i]:Infinity, y=j<b.length?b[j]:Infinity; let v;
+        if(x<y){v=x;i++;} else if(y<x){v=y;j++;} else {v=x;i++;j++;}
+        if(v!==last){r.push(v);last=v;}
+      } return r;};
+    const intersection=(a,b)=>{const r=[];let i=0,j=0,last;
+      while(i<a.length&&j<b.length){
+        if(a[i]===b[j]){ if(a[i]!==last){r.push(a[i]);last=a[i];} i++; j++; }
+        else if(a[i]<b[j]) i++; else j++;
+      } return r;};
+    const A=[1,2,2,3,5,8], B=[2,3,4,8,9];
+    u.textContent = union(A,B).join(', ');
+    i.textContent = intersection(A,B).join(', ');
+  </script>
+</body>
+</html>

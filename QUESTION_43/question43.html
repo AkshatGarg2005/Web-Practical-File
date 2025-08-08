@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Q17</title>
+</head>
+<body>
+  <h3>Q17: Periodic Table (CSS Grid)</h3>
+
+  <style>
+    .pt{display:grid;grid-template-columns:repeat(18,3rem);grid-auto-rows:3.2rem;gap:.3rem}
+    .el{border:1px solid #bbb;border-radius:.35rem;text-align:center;padding:.2rem;font-weight:600}
+    .el small{display:block;font-size:.7rem;opacity:.8}
+    .alkali{background:#ffe8cc}.alkaline{background:#fff2b3}.noble{background:#dff1ff}
+    .halogen{background:#e7ffe0}.lanth{background:#fde0ff}.act{background:#fbe4e6}.dblock{background:#eef}
+    .el:hover{transform:scale(1.08);box-shadow:0 0 10px rgba(0,0,0,.15);z-index:2}
+  </style>
+
+  <div class="pt">
+    <!-- Period 1 -->
+    <div class="el alkali" style="grid-column:1;grid-row:1">H<small>1</small></div>
+    <div class="el noble"  style="grid-column:18;grid-row:1">He<small>2</small></div>
+
+    <!-- Period 2 -->
+    <div class="el alkali"   style="grid-column:1;grid-row:2">Li<small>3</small></div>
+    <div class="el alkaline" style="grid-column:2;grid-row:2">Be<small>4</small></div>
+    <div class="el"          style="grid-column:13;grid-row:2">B<small>5</small></div>
+    <div class="el"          style="grid-column:14;grid-row:2">C<small>6</small></div>
+    <div class="el"          style="grid-column:15;grid-row:2">N<small>7</small></div>
+    <div class="el"          style="grid-column:16;grid-row:2">O<small>8</small></div>
+    <div class="el halogen"  style="grid-column:17;grid-row:2">F<small>9</small></div>
+    <div class="el noble"    style="grid-column:18;grid-row:2">Ne<small>10</small></div>
+
+    <!-- Period 3 -->
+    <div class="el alkali"   style="grid-column:1;grid-row:3">Na<small>11</small></div>
+    <div class="el alkaline" style="grid-column:2;grid-row:3">Mg<small>12</small></div>
+    <div class="el"          style="grid-column:13;grid-row:3">Al<small>13</small></div>
+    <div class="el"          style="grid-column:14;grid-row:3">Si<small>14</small></div>
+    <div class="el"          style="grid-column:15;grid-row:3">P<small>15</small></div>
+    <div class="el"          style="grid-column:16;grid-row:3">S<small>16</small></div>
+    <div class="el halogen"  style="grid-column:17;grid-row:3">Cl<small>17</small></div>
+    <div class="el noble"    style="grid-column:18;grid-row:3">Ar<small>18</small></div>
+
+    <!-- Period 4 -->
+    <div class="el alkali"   style="grid-column:1;grid-row:4">K<small>19</small></div>
+    <div class="el alkaline" style="grid-column:2;grid-row:4">Ca<small>20</small></div>
+    <div class="el dblock"   style="grid-column:3;grid-row:4">Sc<small>21</small></div>
+    <div class="el dblock"   style="grid-column:4;grid-row:4">Ti<small>22</small></div>
+    <div class="el dblock"   style="grid-column:5;grid-row:4">V<small>23</small></div>
+    <div class="el dblock"   style="grid-column:6;grid-row:4">Cr<small>24</small></div>
+    <div class="el dblock"   style="grid-column:7;grid-row:4">Mn<small>25</small></div>
+    <div class="el dblock"   style="grid-column:8;grid-row:4">Fe<small>26</small></div>
+    <div class="el dblock"   style="grid-column:9;grid-row:4">Co<small>27</small></div>
+    <div class="el dblock"   style="grid-column:10;grid-row:4">Ni<small>28</small></div>
+    <div class="el dblock"   style="grid-column:11;grid-row:4">Cu<small>29</small></div>
+    <div class="el dblock"   style="grid-column:12;grid-row:4">Zn<small>30</small></div>
+    <div class="el"          style="grid-column:13;grid-row:4">Ga<small>31</small></div>
+    <div class="el"          style="grid-column:14;grid-row:4">Ge<small>32</small></div>
+    <div class="el"          style="grid-column:15;grid-row:4">As<small>33</small></div>
+    <div class="el"          style="grid-column:16;grid-row:4">Se<small>34</small></div>
+    <div class="el halogen"  style="grid-column:17;grid-row:4">Br<small>35</small></div>
+    <div class="el noble"    style="grid-column:18;grid-row:4">Kr<small>36</small></div>
+
+    <!-- Period 5 -->
+    <div class="el alkali"   style="grid-column:1;grid-row:5">Rb<small>37</small></div>
+    <div class="el alkaline" style="grid-column:2;grid-row:5">Sr<small>38</small></div>
+    <div class="el dblock"   style="grid-column:3;grid-row:5">Y<small>39</small></div>
+    <div class="el dblock"   style="grid-column:4;grid-row:5">Zr<small>40</small></div>
+    <div class="el dblock"   style="grid-column:5;grid-row:5">Nb<small>41</small></div>
+    <div class="el dblock"   style="grid-column:6;grid-row:5">Mo<small>42</small></div>
+    <div class="el dblock"   style="grid-column:7;grid-row:5">Tc<small>43</small></div>
+    <div class="el dblock"   style="grid-column:8;grid-row:5">Ru<small>44</small></div>
+    <div class="el dblock"   style="grid-column:9;grid-row:5">Rh<small>45</small></div>
+    <div class="el dblock"   style="grid-column:10;grid-row:5">Pd<small>46</small></div>
+    <div class="el dblock"   style="grid-column:11;grid-row:5">Ag<small>47</small></div>
+    <div class="el dblock"   style="grid-column:12;grid-row:5">Cd<small>48</small></div>
+    <div class="el"          style="grid-column:13;grid-row:5">In<small>49</small></div>
+    <div class="el"          style="grid-column:14;grid-row:5">Sn<small>50</small></div>
+    <div class="el"          style="grid-column:15;grid-row:5">Sb<small>51</small></div>
+    <div class="el"          style="grid-column:16;grid-row:5">Te<small>52</small></div>
+    <div class="el halogen"  style="grid-column:17;grid-row:5">I<small>53</small></div>
+    <div class="el noble"    style="grid-column:18;grid-row:5">Xe<small>54</small></div>
+
+    <!-- Period 6 -->
+    <div class="el alkali"   style="grid-column:1;grid-row:6">Cs<small>55</small></div>
+    <div class="el alkaline" style="grid-column:2;grid-row:6">Ba<small>56</small></div>
+    <div class="el lanth"    style="grid-column:3;grid-row:6">La*<small>57–71</small></div>
+    <div class="el dblock"   style="grid-column:4;grid-row:6">Hf<small>72</small></div>
+    <div class="el dblock"   style="grid-column:5;grid-row:6">Ta<small>73</small></div>
+    <div class="el dblock"   style="grid-column:6;grid-row:6">W<small>74</small></div>
+    <div class="el dblock"   style="grid-column:7;grid-row:6">Re<small>75</small></div>
+    <div class="el dblock"   style="grid-column:8;grid-row:6">Os<small>76</small></div>
+    <div class="el dblock"   style="grid-column:9;grid-row:6">Ir<small>77</small></div>
+    <div class="el dblock"   style="grid-column:10;grid-row:6">Pt<small>78</small></div>
+    <div class="el dblock"   style="grid-column:11;grid-row:6">Au<small>79</small></div>
+    <div class="el dblock"   style="grid-column:12;grid-row:6">Hg<small>80</small></div>
+    <div class="el"          style="grid-column:13;grid-row:6">Tl<small>81</small></div>
+    <div class="el"          style="grid-column:14;grid-row:6">Pb<small>82</small></div>
+    <div class="el"          style="grid-column:15;grid-row:6">Bi<small>83</small></div>
+    <div class="el"          style="grid-column:16;grid-row:6">Po<small>84</small></div>
+    <div class="el halogen"  style="grid-column:17;grid-row:6">At<small>85</small></div>
+    <div class="el noble"    style="grid-column:18;grid-row:6">Rn<small>86</small></div>
+
+    <!-- Period 7 -->
+    <div class="el alkali"   style="grid-column:1;grid-row:7">Fr<small>87</small></div>
+    <div class="el alkaline" style="grid-column:2;grid-row:7">Ra<small>88</small></div>
+    <div class="el act"      style="grid-column:3;grid-row:7">Ac*<small>89–103</small></div>
+    <div class="el dblock"   style="grid-column:4;grid-row:7">Rf<small>104</small></div>
+    <div class="el dblock"   style="grid-column:5;grid-row:7">Db<small>105</small></div>
+    <div class="el dblock"   style="grid-column:6;grid-row:7">Sg<small>106</small></div>
+    <div class="el dblock"   style="grid-column:7;grid-row:7">Bh<small>107</small></div>
+    <div class="el dblock"   style="grid-column:8;grid-row:7">Hs<small>108</small></div>
+    <div class="el dblock"   style="grid-column:9;grid-row:7">Mt<small>109</small></div>
+    <div class="el dblock"   style="grid-column:10;grid-row:7">Ds<small>110</small></div>
+    <div class="el dblock"   style="grid-column:11;grid-row:7">Rg<small>111</small></div>
+    <div class="el dblock"   style="grid-column:12;grid-row:7">Cn<small>112</small></div>
+    <div class="el"          style="grid-column:13;grid-row:7">Nh<small>113</small></div>
+    <div class="el"          style="grid-column:14;grid-row:7">Fl<small>114</small></div>
+    <div class="el"          style="grid-column:15;grid-row:7">Mc<small>115</small></div>
+    <div class="el"          style="grid-column:16;grid-row:7">Lv<small>116</small></div>
+    <div class="el halogen"  style="grid-column:17;grid-row:7">Ts<small>117</small></div>
+    <div class="el noble"    style="grid-column:18;grid-row:7">Og<small>118</small></div>
+
+    <!-- Lanthanides -->
+    <div class="el lanth" style="grid-column:4;grid-row:8">La<small>57</small></div>
+    <div class="el lanth" style="grid-column:5;grid-row:8">Ce<small>58</small></div>
+    <div class="el lanth" style="grid-column:6;grid-row:8">Pr<small>59</small></div>
+    <div class="el lanth" style="grid-column:7;grid-row:8">Nd<small>60</small></div>
+    <div class="el lanth" style="grid-column:8;grid-row:8">Pm<small>61</small></div>
+    <div class="el lanth" style="grid-column:9;grid-row:8">Sm<small>62</small></div>
+    <div class="el lanth" style="grid-column:10;grid-row:8">Eu<small>63</small></div>
+    <div class="el lanth" style="grid-column:11;grid-row:8">Gd<small>64</small></div>
+    <div class="el lanth" style="grid-column:12;grid-row:8">Tb<small>65</small></div>
+    <div class="el lanth" style="grid-column:13;grid-row:8">Dy<small>66</small></div>
+    <div class="el lanth" style="grid-column:14;grid-row:8">Ho<small>67</small></div>
+    <div class="el lanth" style="grid-column:15;grid-row:8">Er<small>68</small></div>
+    <div class="el lanth" style="grid-column:16;grid-row:8">Tm<small>69</small></div>
+    <div class="el lanth" style="grid-column:17;grid-row:8">Yb<small>70</small></div>
+    <div class="el lanth" style="grid-column:18;grid-row:8">Lu<small>71</small></div>
+
+    <!-- Actinides -->
+    <div class="el act" style="grid-column:4;grid-row:9">Ac<small>89</small></div>
+    <div class="el act" style="grid-column:5;grid-row:9">Th<small>90</small></div>
+    <div class="el act" style="grid-column:6;grid-row:9">Pa<small>91</small></div>
+    <div class="el act" style="grid-column:7;grid-row:9">U<small>92</small></div>
+    <div class="el act" style="grid-column:8;grid-row:9">Np<small>93</small></div>
+    <div class="el act" style="grid-column:9;grid-row:9">Pu<small>94</small></div>
+    <div class="el act" style="grid-column:10;grid-row:9">Am<small>95</small></div>
+    <div class="el act" style="grid-column:11;grid-row:9">Cm<small>96</small></div>
+    <div class="el act" style="grid-column:12;grid-row:9">Bk<small>97</small></div>
+    <div class="el act" style="grid-column:13;grid-row:9">Cf<small>98</small></div>
+    <div class="el act" style="grid-column:14;grid-row:9">Es<small>99</small></div>
+    <div class="el act" style="grid-column:15;grid-row:9">Fm<small>100</small></div>
+    <div class="el act" style="grid-column:16;grid-row:9">Md<small>101</small></div>
+    <div class="el act" style="grid-column:17;grid-row:9">No<small>102</small></div>
+    <div class="el act" style="grid-column:18;grid-row:9">Lr<small>103</small></div>
+  </div>
+</body>
+</html>

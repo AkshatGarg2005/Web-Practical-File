@@ -1,0 +1,16 @@
+question: 1) What is HTML and HTML5? Features of HTML5?
+answer:
+
+HTML: markup to structure web content (headings, links, images). HTML5: modern revision adding semantics + APIs.
+
+Syntax: short doctype <!DOCTYPE html>, cleaner markup, backward-compatible.
+
+Semantics: <header> <nav> <section> <article> <aside> <footer> <figure>.
+
+Media/graphics: native <audio>, <video>, <canvas>, SVG (no plugins).
+
+Forms: new inputs (email, date, range…), attributes (required, pattern, min/max), built-in validation.
+
+Storage/APIs: localStorage, sessionStorage, IndexedDB; Geolocation, History, Drag&Drop, Web Workers, WebSocket.
+
+Benefits: better accessibility/SEO, mobile-friendly, faster and simpler development.

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Q6</title>
+</head>
+<body>
+  <h3>Q6: Second Lowest & Highest</h3>
+  <p>Array: <code>[5,1,9,2,9,7,2]</code></p>
+  <p><b>Result:</b> <span id="out"></span></p>
+
+  <script>
+    const secondLowHigh = arr => {
+      const a = [...new Set(arr)].sort((x,y)=>x-y);
+      return { secondLowest: a[1], secondGreatest: a[a.length-2] };
+    };
+    out.textContent = JSON.stringify(secondLowHigh([5,1,9,2,9,7,2]));
+  </script>
+</body>
+</html>

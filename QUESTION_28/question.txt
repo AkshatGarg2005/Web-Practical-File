@@ -1,0 +1,12 @@
+question: 2) What is a virtual root and how do you create one?
+answer:
+
+Virtual root (virtual directory/site): maps a domain/path to a chosen physical folder to serve as the site’s document root.
+
+Why: host multiple sites on one server, isolate apps, map subpaths (e.g., /images) to other disks.
+
+Set up (general): bind domain/port → set document root (folder) → allow directory access → set default file (index.html) → reload server.
+
+Server hints: Apache (VirtualHost with DocumentRoot), Nginx (server block root), IIS (Add Website/Virtual Directory: Alias + Physical Path).
+
+Notes: fix file permissions, avoid exposing private dirs, add logs/redirects as needed.

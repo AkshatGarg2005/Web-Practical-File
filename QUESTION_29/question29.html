@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Q3</title>
+  </head>
+  <body>
+    <h3>Q3: Alphabetical Order</h3>
+    <p>Input: <code>vitbhopal</code></p>
+    <p><b>Output:</b> <span id="out"></span></p>
+    <script>
+      const alphaOrder = (s) =>
+        s
+          .split("")
+          .sort((a, b) => a.localeCompare(b))
+          .join("");
+      document.getElementById("out").textContent = alphaOrder("vitbhopal");
+    </script>
+  </body>
+</html>

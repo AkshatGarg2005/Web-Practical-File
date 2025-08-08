@@ -1,0 +1,12 @@
+question: 14) Difference between JavaScript and jQuery.
+answer:
+
+JavaScript: the language + browser/Node APIs (DOM, fetch, events, classes, modules).
+
+jQuery: a JS library that simplified old cross-browser DOM, events, AJAX, and animations via $() and chaining.
+
+Today: modern JS (querySelector, classList, fetch, async/await) and CSS transitions reduce the need for jQuery.
+
+Use jQuery when: maintaining legacy apps or using specific jQuery plugins.
+
+Pros/cons: jQuery = quick, consistent, plugin-rich but extra weight; plain JS = no dependency, faster, idiomatic now.

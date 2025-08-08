@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Q5</title>
+</head>
+<body>
+  <h3>Q5: Type Detector</h3>
+  <p>Value: <code>[1,2,3]</code></p>
+  <p><b>Type:</b> <span id="out"></span></p>
+
+  <script>
+    const typeOf = v => (v===null ? 'null' : Array.isArray(v) ? 'array' : typeof v);
+    out.textContent = typeOf([1,2,3]);
+  </script>
+</body>
+</html>

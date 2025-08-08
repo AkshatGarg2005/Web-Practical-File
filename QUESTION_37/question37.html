@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Q11</title>
+</head>
+<body>
+  <h3>Q11: camelCase</h3>
+  <p>Input: <code>hello world_from-vit-bhopal</code></p>
+  <p><b>Output:</b> <span id="out"></span></p>
+
+  <script>
+    const toCamel = s => s.toLowerCase().split(/[\s_\-]+/)
+      .map((w,i)=> i ? w[0].toUpperCase()+w.slice(1) : w)
+      .join('');
+    out.textContent = toCamel("hello world_from-vit-bhopal");
+  </script>
+</body>
+</html>

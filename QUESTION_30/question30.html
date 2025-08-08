@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Q4</title>
+</head>
+<body>
+  <h3>Q4: Longest Word</h3>
+  <p>Sentence: <code>VIT Bhopal makes strong engineers</code></p>
+  <p><b>Longest word:</b> <span id="out"></span></p>
+
+  <script>
+    const longestWord = s => (s.match(/\b\w+\b/g)||[])
+      .reduce((a,w)=> w.length>a.length ? w : a, '');
+    out.textContent = longestWord("VIT Bhopal makes strong engineers");
+  </script>
+</body>
+</html>

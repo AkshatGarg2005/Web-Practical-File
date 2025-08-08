@@ -1,0 +1,1 @@
+question: 7) Write a JavaScript function to get all subsets with a fixed length (e.g., 2) in an array.
