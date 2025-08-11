@@ -1,0 +1,5 @@
+question: q.20 Write the difference between get and post method
+answer:
+GET: read-only retrieval; parameters in URL; cacheable; bookmarked; length restrictions; use for safe/idempotent requests. 
+POST: submit data/changes state; data in body; not cached by default; no length limit typical; use for create/form or actions with side effects.
+

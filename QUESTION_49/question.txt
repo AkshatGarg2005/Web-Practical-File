@@ -1,0 +1,4 @@
+question: Q6. Explore all application protocols.
+answer:
+HTTP/HTTPS, DNS, SMTP/IMAP/POP3, FTP/FTPS/SFTP, SSH/Telnet, SNMP, NTP, LDAP, DHCP, RTP/RTSP, WebSocket, MQTT/CoAP, SOAP/REST over HTTP, gRPC (HTTP/2), SMB/NFS (file sharing).
+

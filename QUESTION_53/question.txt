@@ -1,0 +1,18 @@
+question: Q10. Discuss all types of web hosting with their advantages and disadvantages.
+answer:
+
+Shared: cheapest. Advantage: low cost. Disadvantage: noisy neighbors/limits.
+
+VPS: virtual server. Advantage: root/control; scalable. Disadvantage: needs admin.
+
+Dedicated: full machine. Advantage: performance/control. Disadvantage: expensive.
+
+Cloud: elastic cluster. Advantage: auto-scale/HA. Disadvantage: complex/variable cost.
+
+Managed (e.g., WordPress): Advantage: convenience/support. Disadvantage: less flexibility.
+
+Serverless/FaaS: Advantage: scale to zero. Disadvantage: cold starts/state mgmt.
+
+Static/JAMstack (CDN): Advantage: speed/security. Disadvantage: dynamic via APIs only.
+
+Colocation/Reseller: Advantage: hardware/business control. Disadvantage: ops burden.

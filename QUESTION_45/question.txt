@@ -1,0 +1,8 @@
+question: Q2. Difference between circuit, packet and network switching.
+answer:
+
+Circuit: connection-oriented, dedicated bandwidth, constant rate; good for voice; inefficient for bursts.
+
+Packet: shared links, best-effort (datagram) or VC; efficient/utilization high; variable delay.
+
+Network/Message (store-and-forward): entire message buffered at each hop; very high latency; rarely used now.

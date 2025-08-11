@@ -1,0 +1,3 @@
+question: Q9. Discuss popular website hosting providers.
+answer:
+Cloud IaaS: AWS, Azure, Google Cloud. VPS: DigitalOcean, Linode, Vultr. Shared/Managed: Hostinger, SiteGround, Bluehost, GoDaddy. Static/PaaS: Vercel, Netlify, Cloudflare Pages, GitHub Pages, Render, Heroku.

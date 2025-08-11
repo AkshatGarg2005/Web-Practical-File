@@ -1,0 +1,7 @@
+question: Q15. Write a JS code with innerHTML concept to create a form having:
+
+a) Student Name
+
+b) Registration no
+
+c) Branch

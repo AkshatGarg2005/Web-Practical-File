@@ -1,0 +1,3 @@
+question: Q3. Discuss all types of internet services.
+answer:
+Email (SMTP/IMAP/POP), Web (HTTP/HTTPS), DNS, File transfer (FTP/SFTP/FTPS), Remote login (SSH), Streaming/VoIP (RTP/RTSP, SIP/WebRTC), Chat/IM, Cloud storage/backup, VPN, NTP (time), SNMP (management), IoT (MQTT/CoAP), CDN, Online gaming and content platforms.

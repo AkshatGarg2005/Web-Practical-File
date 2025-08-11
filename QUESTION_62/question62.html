@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Array Construction (Blank Screen)</title>
+</head>
+<body>
+  <script>
+    // Literal
+    const a = [1, 2, 3];
+
+    // Constructor
+    const b = new Array(1, 2, 3);
+    const c = new Array(5); // length 5, empty slots
+
+    // Array.from / Array.of
+    const d = Array.from("VIT"); // ['V','I','T']
+    const e = Array.from({ length: 4 }, (_, i) => (i + 1) ** 2); // [1,4,9,16]
+    const f = Array.of(1, 2, 3);
+
+    console.log({ a, b, c, d, e, f }); // outputs to console; screen stays blank
+  </script>
+</body>
+</html>

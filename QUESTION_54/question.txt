@@ -1,0 +1,12 @@
+question: Q11. Write about the various servers like Apache, IIS, Lighttpd, Sun Java System Web Server and Jigsaw Server.
+answer:
+
+Apache HTTP Server: modular, cross-platform, rich ecosystem (.htaccess, MPMs).
+
+IIS: Microsoft Windows server tightly integrated with .NET/Active Directory; GUI tools.
+
+Lighttpd: lightweight, event-driven; good for static/embedded workloads.
+
+Sun Java System Web Server (iPlanet/Oracle): enterprise, Java integration; legacy use.
+
+Jigsaw (W3C): Java-based research/reference server showcasing HTTP features.

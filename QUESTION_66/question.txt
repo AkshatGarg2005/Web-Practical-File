@@ -1,0 +1,3 @@
+question: Q 23 Explain the concept of Pass by Reference and Pass by Value in Javascript. Write a code to calculate the area and circumference of the circle, using these two concepts.
+answer:
+Concept: Primitives (number, string, boolean, etc.) are passed by value (function gets a copy). Objects/arrays are passed by reference (function can mutate the original object).

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Q15: innerHTML Form</title>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif}
+  .card{width:320px;padding:18px;border:1px solid #e5e7eb;background:#fff;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+  h2{margin:0 0 10px;font-size:18px;text-align:center}
+  label{display:block;margin:8px 0 4px;font-size:13px;color:#374151}
+  input{width:100%;padding:8px;border:1px solid #d1d5db;border-radius:6px}
+  button{margin-top:10px;width:100%;padding:10px;border:0;border-radius:8px;background:#1f2937;color:#fff;font-weight:600;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+  const app=document.getElementById('app');
+  app.innerHTML=`
+    <div class="card">
+      <h2>Student Form</h2>
+      <form id="f">
+        <label>Student Name</label><input name="name" required>
+        <label>Registration no</label><input name="reg" required>
+        <label>Branch</label><input name="branch" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>`;
+  document.getElementById('f').addEventListener('submit',e=>{
+    e.preventDefault();
+    const d=new FormData(e.target);
+    alert('Name: '+d.get('name')+'\nReg: '+d.get('reg')+'\nBranch: '+d.get('branch'));
+  });
+</script>
+</body>
+</html>

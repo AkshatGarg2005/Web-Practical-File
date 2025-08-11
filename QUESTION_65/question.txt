@@ -1,0 +1,8 @@
+question: Q 22 Discuss all the 3 ways to construct an array in javascript. Explain with examples.
+answer:
+
+Literal: const nums = [10,20,30];
+
+Constructor: const evens = new Array(2,4,6);
+
+Array.from: const squares = Array.from({length:4},(_,i)=>(i+1)**2); // [1,4,9,16]

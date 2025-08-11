@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Q16: Dynamic Page for Authorised Person</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f3f4f6;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .card {
+        width: 320px;
+        padding: 18px;
+        border: 1px solid #e5e7eb;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin: 8px 0 4px;
+        font-size: 13px;
+        color: #374151;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+      }
+      button {
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        border: 0;
+        border-radius: 8px;
+        background: #1f2937;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .ok {
+        color: #065f46;
+        background: #d1fae5;
+        border: 1px solid #10b981;
+        padding: 8px;
+        border-radius: 6px;
+        margin: 8px 0;
+      }
+      .err {
+        color: #7f1d1d;
+        background: #fee2e2;
+        border: 1px solid #ef4444;
+        padding: 8px;
+        border-radius: 6px;
+        margin: 8px 0;
+        display: none;
+      }
+      .meta {
+        font-size: 12px;
+        color: #6b7280;
+        text-align: center;
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="login">
+      <h2>Authorised Login</h2>
+      <form id="f">
+        <label>Username</label><input name="u" required />
+        <label>Password</label><input name="p" type="password" required />
+        <div class="err" id="err">Invalid credentials</div>
+        <button type="submit">Sign In</button>
+      </form>
+      <div class="meta">Hint: admin / vitb@123</div>
+    </div>
+
+    <div class="card" id="dash" style="display: none">
+      <h2 id="welcome"></h2>
+      <div class="ok">Access Level: Authorised</div>
+      <ul
+        id="links"
+        style="
+          margin: 10px 0 0 18px;
+          padding: 0;
+          font-size: 13px;
+          color: #374151;
+        "
+      ></ul>
+      <button id="out">Logout</button>
+    </div>
+
+    <script>
+      const USER = "admin",
+        PASS = "vitb@123";
+      const $ = (s) => document.querySelector(s);
+      $("#f").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const d = new FormData(e.target),
+          u = d.get("u"),
+          p = d.get("p");
+        if (u === USER && p === PASS) {
+          $("#login").style.display = "none";
+          $("#dash").style.display = "block";
+          $("#welcome").textContent = "Welcome, " + u;
+          $("#links").innerHTML = ["Profile", "Reports", "Settings"]
+            .map((x) => `<li>${x}</li>`)
+            .join("");
+        } else {
+          $("#err").style.display = "block";
+        }
+      });
+      $("#out").addEventListener("click", () => {
+        $("#dash").style.display = "none";
+        $("#login").style.display = "block";
+        $("#err").style.display = "none";
+        $("#f").reset();
+      });
+    </script>
+  </body>
+</html>

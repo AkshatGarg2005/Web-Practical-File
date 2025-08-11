@@ -1,0 +1,3 @@
+question: Q12. Write difference between get and the post method.
+answer:
+GET: retrieves; idempotent; parameters in URL; cacheable; length limits; used for reads. POST: submits/changes state; data in body; not idempotent; not cached by default; used for create/form submissions.

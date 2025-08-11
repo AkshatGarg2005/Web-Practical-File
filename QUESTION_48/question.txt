@@ -1,0 +1,9 @@
+question: Q5. Explore routing and network protocols.
+answer:
+
+Routing: static, default, dynamic.
+
+Dynamic: distance-vector (RIP), link-state (OSPF/IS-IS), path-vector (BGP), hybrid (EIGRP). Metrics: hop count, cost, bandwidth, delay.
+
+Network stack: IP (v4/v6), ICMP, ARP/ND, TCP, UDP, DHCP, NAT; routing protocols above.
+

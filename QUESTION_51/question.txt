@@ -1,0 +1,3 @@
+question: Q8. Discuss the advantages and disadvantages of static web pages.
+answer:
+Advantages: very fast (CDN-friendly), inexpensive, secure (no server code), easy to cache/version. Disadvantages: not dynamic, manual updates, limited personalization/forms (need JS or APIs), unsuitable for user-generated content.

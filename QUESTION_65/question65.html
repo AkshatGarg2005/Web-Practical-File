@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Three Array Ways (Blank Screen)</title>
+</head>
+<body>
+  <script>
+    // 1) Literal
+    const nums = [10, 20, 30];
+
+    // 2) Constructor
+    const evens = new Array(2, 4, 6);
+
+    // 3) Array.from (with mapping example)
+    const squares = Array.from({ length: 4 }, (_, i) => (i + 1) ** 2);
+
+    console.log({ nums, evens, squares }); // screen remains blank
+  </script>
+</body>
+</html>

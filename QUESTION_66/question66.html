@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pass by Value vs Reference (Blank Screen)</title>
+</head>
+<body>
+  <script>
+    // Value: return computed results from a primitive
+    function circleAC_byValue(r) {
+      const area = Math.PI * r * r;
+      const circ = 2 * Math.PI * r;
+      return { area, circ };
+    }
+
+    // Reference: write results into an object
+    function circleAC_byRef(circle) {
+      circle.area = Math.PI * circle.r * circle.r;
+      circle.circ = 2 * Math.PI * circle.r;
+    }
+
+    // Examples (results in console)
+    console.log(circleAC_byValue(4));
+    const c = { r: 4 };
+    circleAC_byRef(c);
+    console.log(c);
+  </script>
+</body>
+</html>

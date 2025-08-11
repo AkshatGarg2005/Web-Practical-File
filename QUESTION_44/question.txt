@@ -1,0 +1,14 @@
+question: Q1. Explain the different types of switching and their advantages and disadvantages.
+answer:
+
+Circuit switching: dedicated end-to-end path. Advantages: guaranteed bandwidth/low jitter; predictable. Disadvantages: setup delay; wastes capacity for bursty traffic; single failure breaks call.
+
+Packet switching:
+
+Datagram (IP): each packet routed independently. Advantages: efficient, robust. Disadvantages: variable delay, reordering/loss.
+
+Virtual circuit (e.g., MPLS/Frame Relay): logical path pre-set. Advantages: ordering/QoS options. Disadvantages: setup/state overhead.
+
+Message switching (store-and-forward whole message). Advantages: no dedicated path needed. Disadvantages: very high delay; obsolete.
+
+Cell switching (ATM, fixed-size cells). Advantages: low jitter/QoS. Disadvantages: overhead/complex; legacy.

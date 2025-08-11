@@ -1,0 +1,8 @@
+question: Q4. Difference between internet, intranet and extranet?
+answer:
+
+Internet: public global network; open access.
+
+Intranet: private network within an organization; authenticated internal users.
+
+Extranet: controlled remote access for partners/customers to specific intranet resources over the Internet.

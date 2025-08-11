@@ -1,0 +1,3 @@
+question: Q7. Why FTP is more-reliable.
+answer:
+FTP uses TCP and a separate control channel with clear status codes; supports restart/resume (REST), block/stream modes, and integrity options. These features improve transfer reliability (though FTP alone is not encrypted).

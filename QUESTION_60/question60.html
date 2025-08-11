@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pass by Value/Reference (Blank Screen)</title>
+</head>
+<body>
+  <script>
+    // Pass by value (primitive number):
+    function areaByValue(r) { return Math.PI * r * r; }
+
+    // Pass by reference (via object):
+    function areaByRef(obj) { obj.area = Math.PI * obj.r * obj.r; }
+
+    // Results printed to console (screen stays blank)
+    console.log("Value:", areaByValue(5));
+    const circle = { r: 5 };
+    areaByRef(circle);
+    console.log("Reference:", circle.area);
+  </script>
+</body>
+</html>

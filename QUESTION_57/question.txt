@@ -1,0 +1,3 @@
+question: Q14. Write a code for the box model and also explain the box model.
+answer:
+Explanation (short): Box model layers outward are Content → Padding → Border → Margin. Declared width/height apply to content; total size adds padding/border (unless using box-sizing:border-box).

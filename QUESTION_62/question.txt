@@ -1,0 +1,9 @@
+question: Q19. Discuss the ways to construct an array in JS and write its code.
+answer:
+Ways:
+
+Literal: concise; preferred.
+
+Constructor (new Array): can set length or list items.
+
+Array.from / Array.of: from iterables or values; mapping function option.
